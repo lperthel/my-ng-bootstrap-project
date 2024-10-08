@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-md navbar-light bg-body-tertiary mb-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="'.'">
+      <img
+        src="assets/box-seam.svg"
+        alt="Move It Logo"
+        width="30"
+        height="24"
+        class="d-inline-block align-text-top"
+      />
+      Move It
+    </a>
+
+    <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="isMenuCollapsed = !isMenuCollapsed"
+    >
+      &#9776;
+    </button>
+
+    <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item active">
+          <a
+            class="nav-link"
+            [routerLink]="'.'"
+            (click)="isMenuCollapsed = true"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="'.'"
+            (click)="isMenuCollapsed = true"
+            >About</a
+          >
+        </li>
+        <li class="nav-item d-flex align-items-center">
+          <app-menu-dropdown></app-menu-dropdown>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Zipcode"
+          aria-label="Zipcode"
+        />
+        <button class="btn btn-outline-success" type="submit">Check</button>
+      </form>
+    </div>
+  </div>
+</nav>

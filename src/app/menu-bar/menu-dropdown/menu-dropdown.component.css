@@ -1,0 +1,4 @@
+.menu-nav-button {
+  border: 0;
+  align-self: center; /* Flexbox align vertically */
+}

@@ -1,0 +1,4 @@
+.carousel-container .carousel-row {
+  display: flex;
+  justify-content: center;
+}
